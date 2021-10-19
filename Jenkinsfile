@@ -1,10 +1,7 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
+    agent {
+        docker { image 'morgantest:1.0' }
     }
-
-  }
   stages {
     stage('Morgan') {
       steps {
